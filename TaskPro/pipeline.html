@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskPro</title>
+    <link rel="stylesheet" href="theme.css">
+    <link rel="stylesheet" href="pipeline.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"  rel="stylesheet"/>
+</head>
+<body>
+    <main>
+        <div class="nav">
+            <h1>Browser Rendering Pipeline</h1>
+            <button class="toggle"id=theme-toggle><i class="ri-sun-fill" id="theme-icon"></i></button>
+        </div>
+        <div class="diagram">
+            <section class="section-1">
+                <div class="html">HTML</div>
+                <div class="parsing">Parsing</div>
+                <div class="tokenization">Tokenization</div>
+                <div class="dom-tree">DOM Tree</div>
+            </section>
+            <section class="section-2">
+                <div class="css">CSS</div>
+                <div class="cssom">CSSOM Tree</div>
+            </section>
+            <section class="section-3">
+                <div class="dom-css">DOM Tree + CSS</div>
+                <div class="render-tree">Render Tree</div>
+            </section>
+        </div>
+        <div class="button">
+        <a href="./index.html"><button class="rendering">Back to home</button></a>
+    </main>
+    
+    <script src="pipeline.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskPro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"  rel="stylesheet"/>
+</head>
+<body>
+    <div class="taskpro">
+        <nav>
+        <h1>TaskPro</h1>
+        <div class="nav-cont">
+            <button class="toggle"id=theme-toggle><i class="ri-sun-fill" id="theme-icon"></i></button>
+            <div class="input">
+                <i class="ri-search-line"></i>
+                <input type="search" placeholder="Seach tasks">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="my_task">
+            <h2>My tasks</h2>
+            <button class="ri-list">
+                    <i class="ri-list-check"></i>
+            </button>
+            <div class="options">
+                <button class="ri-sort"><i class="ri-sort-desc"></i></button>
+                <button class="add"><i class="ri-add-line"></i></button>
+                <button class="delete_all">Delete All</button>
+            </div>
+        </div>
+        <div class="sort-menu" id="sort-menu">
+            <button onclick="applySortAndClose('priority')">By Priority</button>
+            <button onclick="applySortAndClose('status')">By Status</button>
+            <button onclick="applySortAndClose('date')">By Date</button>
+            <button onclick="applySortAndClose('type')">By Task Type</button>
+            <button onclick="applySortAndClose('default')">Default</button>
+        </div>
+        <hr>
+
+
+        <div class="card-layout">
+            
+        </div>
+            <div class="confirm-modal" id="confirm-modal">
+                <div class="confirm-box">
+                    <p>Are you sure you want to delete all tasks?</p>
+                    <div class="confirm-actions">
+                        <button id="confirm-yes">Yes, I am sure</button>
+                        <button id="confirm-no">Cancel</button>
+                    </div>
+                </div>
+            </div>
+
+        <div class="form">
+            <form>
+                <div class="form-heading">
+                    <h1>Add Task</h1>
+                    <button class="close-form"><i class="ri-close-line"></i></button>
+                </div>
+                <input type="text" name="task-title" class="task-title" placeholder="Task to be done"  required>
+                <input type="text" name="task-desc" class="task-desc" placeholder="Description" maxlength="250" required>
+                <select class="priority-opt">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+                <select class="task-type-opt">
+                    <option value="work">Work</option>
+                    <option value="personal">Personal</option>
+                    <option value="health">Health</option>
+                </select>
+                <input type="date" class="date" required>
+                <select class="status">
+                    <option value="not-started">Not Started</option>
+                    <option value="progress">In Progress</option>
+                    <option value="done">Done</option>
+                </select>
+                <input id="submit" type="submit">
+            </form>
+        </div>
+      </main>  
+      <div class="button">
+        <a href="./pipeline.html"><button class="rendering">Browser Rendering</button></a>
+      </div>
+      
+    </div>
+
+    
+    <script src="script.js"></script>
+    
+</body>
+</html>
